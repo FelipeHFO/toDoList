@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import './style.css'
 
 
 const Tarefa = ({onRemove}) => {
 
+    const [isDone, setDone] = useState(false)
+
+    useEffect(() => {
+        console.log(isDone)
+    }, [isDone])
 
     return(
         <li>
-            <input type="text"/>
-            <input type="checkbox"/>
+            <input disabled={isDone} type="text"/>
+            <input onChange={(event) => setDone(event.target.checked)} checked={isDone} type="checkbox"/>
             <button onClick={onRemove}>-</button>
         </li>        
     )

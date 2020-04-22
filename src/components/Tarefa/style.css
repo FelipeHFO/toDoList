@@ -1,0 +1,14 @@
+li{
+    margin: 10px;
+    display: flex;
+    animation: suave 0.3s;
+}
+
+@keyframes suave{
+    from{
+     transform: scaleY(0);
+    }
+    to{
+     transform: scaleY(1);
+    }
+}
