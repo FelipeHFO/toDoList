@@ -1,0 +1,8 @@
+.userIcon{
+    width: 150px;
+    height: 150px;
+    border: 10px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 20px;
+}

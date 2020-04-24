@@ -1,13 +1,18 @@
-div{
+.listaTarefa{
     width: 300px;
-    height: 200;
-    max-height: 600px;
+    height: 100%;
     background-color: darkcyan;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     margin: 20px;
+    border-radius: 15px;
+}
+
+.flex{
+    display: flex;
+    align-items: baseline;
 }
 
 input{
@@ -26,6 +31,28 @@ button{
     cursor: pointer;
 }
 
+p{
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    margin-left: 10px;
+    animation: fadeIn 3000ms;    
+}
+
 ul{
     list-style: none;
+}
+
+.warnIcon{
+    width: 35px;
+    height: 35px;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }

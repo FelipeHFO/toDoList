@@ -7,10 +7,6 @@ const Tarefa = ({onRemove}) => {
 
     const [isDone, setDone] = useState(false)
 
-    useEffect(() => {
-        console.log(isDone)
-    }, [isDone])
-
     return(
         <li>
             <input disabled={isDone} type="text"/>
