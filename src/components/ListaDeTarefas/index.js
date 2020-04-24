@@ -10,7 +10,7 @@ const ListaDeTarefas = () => {
   const [showAddButton, setShowAddButton] = useState(true);
 
   useEffect(() => {
-    if(tasks.length >= 2)
+    if(tasks.length >= 5)
       setShowAddButton(false)
     else
       setShowAddButton(true)
@@ -37,7 +37,7 @@ const ListaDeTarefas = () => {
           <Tarefa key={task.id} onRemove={removeTask(task.id)} /> // key é uma propriedade do react que é utilizada para identificar um componente na Virtual DOM
         ))}
       </ul>
-      {showAddButton !== false ? (<AddButton onClick={() => setTasks([...tasks, {id: new Date().getTime()}])}>+</AddButton>) : null}
+      {showAddButton !== false ? (<><p>Adicionar Tarefa</p><AddButton onClick={() => setTasks([...tasks, {id: new Date().getTime()}])}>+</AddButton></>) : null}
       {showAddButton !== true ? (<div className="flex"><img className="warnIcon" alt="warnIcon" src={Warn}></img> <p>Lista de Tarefas cheia</p></div>) : null}
       
     </div>

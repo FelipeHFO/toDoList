@@ -1,9 +1,32 @@
 li{
     margin: 10px;
     display: flex;
+    align-items: center;
     animation: plot 800ms;
 }
 
+.checkBoxFalse{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.checkBoxTrue{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 21px;
+    color: darkcyan;
+    background-color: white;
+    border-radius: 50%;
+    margin: 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
 
 @keyframes plot{
     from{
